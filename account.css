@@ -1,0 +1,80 @@
+/* 背景とレイアウト */
+body {
+    background-color: #ffe5e5; /* 背景色を設定 */
+    background-image: url(dog.jpg);
+    font-family: Arial, sans-serif; /* フォントをArialに設定 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Hachi Maru Pop", serif;
+    font-weight: bold;
+}
+
+/* フォーム全体のコンテナ */
+.container {
+    background-color: #FFFFFF; /* 背景色は白 */
+    padding: 30px;
+    border-radius: 10px; /* 角を丸める */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+    width: 100%;
+    max-width: 400px; /* 最大幅を400pxに制限 */
+    text-align: center;
+    margin-top: 120px;  /* 上に40pxの余白をつける */
+    margin-bottom: 40px; /* 下に40pxの余白をつける */
+}
+
+/* 見出しのスタイル */
+h1 {
+    color: #000000; /* 緑色の見出し */
+    margin-bottom: 20px; /* 見出し下に余白を設定 */
+}
+
+h2 {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 0px; /* 小見出しに少し余白をつける */
+    text-align: left;
+}
+
+/* 入力フィールドのスタイル */
+input[type="text"], input[type="password"] {
+    width: 100%; /* 入力フィールドを横幅いっぱいに */
+    padding: 10px; /* 内側の余白を設定 */
+    margin: 10px 0 20px 0; /* 上下の余白を設定 */
+    border: 1px solid #cccccc; /* 枠線の色を薄いグレーに */
+    border-radius: 5px; /* 角を丸める */
+    font-size: 16px; /* 文字サイズを設定 */
+    box-sizing: border-box; /* パディングを含めた幅の計算 */
+    font-family: "Hachi Maru Pop", serif;
+}
+
+/* ボタンのスタイル */
+.back-button, .submit-button {
+    background-color: #ac4218; /* ボタンの背景を緑に */
+    color: white; /* 文字の色は白 */
+    border: none; /* ボーダーをなくす */
+    border-radius: 5px; /* ボタンの角を丸める */
+    padding: 10px 20px; /* ボタン内の余白を設定 */
+    cursor: pointer; /* マウスカーソルをポインタに */
+    font-size: 20px; /* 文字のサイズ */
+    margin-top: 10px; /* ボタンの上部に余白 */
+    font-family: "Hachi Maru Pop", serif;
+}
+
+/* 戻るボタンの位置 */
+.back-button {
+    top: 20px;
+    
+} 
+
+/* 送信ボタンのホバーアクション */
+.submit-button:hover {
+    background-color: #ff7b16; /* ホバー時にオレンジ */
+}
+
+.back-button:hover {
+    background-color: #ff7b16; /* ホバー時にオレンジ */
+}
+

@@ -1,0 +1,93 @@
+/* 全体の設定 */
+body {
+    /* background-color: #f0f0f0; */
+    background-color: #ffe5e5; /* 背景色を薄いピンクに設定 */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;  /* 水平中央配置 */
+    align-items: center;      /* 垂直中央配置 */
+    height: 100vh;
+    margin: 0;
+    font-family: "Hachi Maru Pop", serif;
+    font-weight: bold;
+}
+
+/* フォームのコンテナ */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* 見出し h1 の設定 */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* エラーメッセージのスタイル */
+p {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* ユーザー名・パスワードのラベル */
+h2 {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* 入力フィールドのスタイル */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;  /* 内部余白を含めた幅の計算 */
+    font-family: "Hachi Maru Pop", serif;
+}
+
+/* ログインボタンのスタイル */
+button {
+    /* background-color: #1da1f2; SNS風の青色 */
+    background-color: #ac4218; /* ボタンの背景色を設定 */
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Hachi Maru Pop", serif;
+
+}
+
+/* ボタンのホバー効果 */
+button:hover {
+    background-color: #F9CDAD;
+    color: #555;
+}
+
+/* 新規アカウント作成リンク */
+a {
+    font-size: 14px;
+    color: #1da1f2;
+    text-decoration: none;
+    margin-top: 25px;
+    display: block;
+}
+
+/* 新規アカウント作成リンクのホバー効果 */
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,412 @@
+body,
+html {
+    /* background-color: #F9CDAD; */
+    /* background: linear-gradient(to bottom, #1da1f2, #ffffff); */
+    background-color: #ffe5e5;
+    /* 薄い青灰色（Twitterの軽い背景色） */
+    margin: 0;
+    padding: 0px;
+    height: 100%;
+    font-family: "Hachi Maru Pop", serif;
+    color: #333;
+    font-weight: bold;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+/* ユーザー投稿エリア */
+.post-area {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #1da1f2;
+    /* Twitterっぽい青 */
+}
+
+.post-textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    resize: none;
+    padding-right: 0px;
+    font-family: "Hachi Maru Pop", serif;
+}
+
+.media-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* アップロードボタンのスタイル */
+.upload-button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ファイル入力は非表示にする */
+input[type="file"] {
+    display: none;
+}
+
+.upload-button:hover {
+    background-color: #ff69b4;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* 投稿ボタン */
+.post-button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Hachi Maru Pop", serif;
+}
+
+.post-button:hover {
+    background-color: #ff69b4;
+}
+
+/* 投稿リスト */
+.posts-list {
+    margin-top: 20px;
+}
+
+.post {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-user-info h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.post-user-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #1da1f2;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+/* .post-actions {
+    display: flex;
+    gap: 10px;
+} */
+
+.like-btn,
+.reply-btn {
+    background-color: transparent;
+    border: 1px solid #e1e8ed;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.like-btn:hover,
+.reply-btn:hover {
+    background-color: #f1f8ff;
+}
+
+/* ================================================ */
+
+/* サイドバーのスタイル ============================= */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-right: 5px solid #808080;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+/* サイドバーのボタンデザイン */
+.btn-flat-bottom-border {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.btn-flat-bottom-border:hover {
+    border-bottom: 2px solid #ff69b4;
+    color: #1da1f2;
+}
+
+/* サイドバー内の画像のスタイル */
+.sidebar img {
+    width: 100%;  /* 幅をサイドバーに合わせる */
+    height: auto;  /* 高さを自動調整 */
+    margin-top: 200px;  /* 画像の上に余白を追加 */
+    border-radius: 8px;  /* 角を丸くする */
+    object-fit: contain;  /* 画像が枠に収まるようにリサイズ */
+    background-color: #fff; /* 透明部分が背景色として表示される場合、背景色を指定 */
+    opacity: 0.5; /* 画像の透明度を50%に設定 */
+}
+
+/* =============================================== */
+
+/* 検索ボタン ==================================== */
+button {
+    background-color: #fdede4;
+    color: #f2961d;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f2961d;
+    color: #ffffff;
+}
+
+/* ================================================= */
+
+/* スクロールトップボタンのスタイル */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    /* 初期状態で非表示 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    /* 他の要素より前に表示 */
+}
+
+#scroll-to-top.show {
+    display: block;
+    /* スクロール時に表示 */
+}
+
+/* プロフィール表のスタイル */
+.profile-table {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* 検索セクションの位置 */
+.search-section {
+    position: fixed;  /* 固定位置に設定 */
+    top: 20px;        /* 上から20pxの位置 */
+    right: 20px;      /* 右から20pxの位置 */
+    width: 300px;     /* 幅を300pxに設定 */
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;     /* 他の要素より前に表示 */
+    height: 630px;   /*検索エリアの高さ*/
+    
+}
+
+/* 検索フォーム */
+.search-section form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* 検索欄のinput要素 */
+.search-section input {
+    flex-grow: 1;      /* 検索欄の幅を親要素に合わせて伸ばす */
+    height: 40px;      /* 高さを指定 */
+    padding: 8px 12px; /* 内側の余白 */
+    font-size: 16px;   /* フォントサイズ */
+    border: 1px solid #ccc;
+    border-radius: 5px;  /* 角を丸く */
+    box-sizing: border-box;  /* パディングとボーダーをサイズに含める */
+    font-family: "Hachi Maru Pop", serif;
+}
+
+/* 検索ボタン */
+.search-button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    padding: 0 12px;    /* 横のパディング */
+    height: 40px;      /* ボタンの高さを設定 */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* ボタンの左に10pxの余白を追加 */
+}
+
+.search-button:hover {
+    background-color: #ff69b4;
+}
+
+/* 検索結果エリア */
+.search-results {
+    max-height: 490px;      /* 最大高さを指定 */
+    overflow-y: auto;       /* コンテンツがはみ出す場合に縦スクロールを有効に */
+    padding-right: 10px;    /* 右側の余白（スクロールバーの幅を確保） */
+    margin-top: 10px;       /* 検索結果の上に少し余白を追加 */
+    border-top: 1px solid #ccc;  /* 結果の上に境界線を追加 */
+}
+
+/* 検索結果リストアイテム */
+.search-results ul {
+    list-style-type: none;  /* リストの箇条書き記号を消す */
+    padding-left: 0;
+}
+
+/* 検索結果のリスト項目 */
+.search-results li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+/* 検索結果のリンク */
+.search-results a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.search-results img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* 丸いアイコンスタイル */
+.circle-icon {
+    display: flex;
+    /* フレックスボックスで横並び */
+    align-items: center;
+    /* アイコンとテキストを垂直中央揃え */
+    font-size: 16px;
+    /* フォントサイズ */
+}
+
+.circle-icon img {
+    width: 24px;
+    /* アイコンの幅 */
+    height: 24px;
+    /* アイコンの高さ */
+    border-radius: 50%;
+    /* 円形にする */
+    margin-right: 8px;
+    /* アイコンとテキストの間にスペース */
+    object-fit: cover;
+    /* 画像が枠にフィットするようにする */
+}
+
+.post-media {
+    width: 730px; /* 任意の幅 */
+    height: 420px; /* 任意の高さ */
+    object-fit: cover; /* 縦横比を維持しながら中央を切り取る */
+    border-radius: 15px; /* 角を丸くする半径 */
+    overflow: hidden; /* 画像のはみ出しを隠す */
+}
+
+.post-content p {
+    word-wrap: break-word; /* 長い単語を折り返す */
+    word-break: break-word; /* 長すぎる単語を折り返す */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
